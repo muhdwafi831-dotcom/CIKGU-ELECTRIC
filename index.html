@@ -448,7 +448,7 @@
 
     <!-- BAHAGIAN 1: APA ITU MOTOR ELEKTRIK -->
     <section id="motor" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto space-y-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <!-- Left Content -->
                 <div class="lg:col-span-6 space-y-6">
@@ -535,12 +535,40 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SUBSECTION BAHARU: RAJAH PENERANGAN MOTOR ELEKTRIK (DC) -->
+            <div class="pt-8 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-trigger-fade-up">
+                <div class="glassmorphism p-6 sm:p-8 rounded-3xl border border-neonBlue/30 shadow-neonB hover:shadow-neonBlue/30 transition-all duration-300">
+                    <h3 class="font-orbitron font-extrabold text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonCyan neon-text-blue mb-6">
+                        RAJAH PENERANGAN MOTOR ELEKTRIK (DC)
+                    </h3>
+                    <div class="w-full flex flex-col lg:flex-row gap-8 items-center">
+                        <div class="w-full lg:w-1/2 aspect-video overflow-hidden rounded-2xl border border-neonBlue/20 shadow-lg relative group">
+                            <img src="motor dc.png" alt="Rajah Penerangan Motor Elektrik (DC)" class="w-full h-full object-contain cursor-pointer transition-transform duration-500 hover:scale-[1.03]" onclick="openDiagramModal('motor dc.png', 'RAJAH PENERANGAN MOTOR ELEKTRIK (DC)')">
+                            <!-- Overlay Petunjuk Zoom -->
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span class="px-4 py-2 rounded-full bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron font-semibold text-xs tracking-wider">
+                                    <i class="fas fa-search-plus mr-1"></i> LIHAT RAJAH PENUH
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-6">
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Rajah ini menunjukkan struktur lengkap Motor Elektrik DC termasuk komponen utama, arah arus elektrik, medan magnet, daya tolakan, daya tarikan, komutator dan proses penukaran tenaga elektrik kepada tenaga mekanikal.
+                            </p>
+                            <button onclick="openDiagramModal('motor dc.png', 'RAJAH PENERANGAN MOTOR ELEKTRIK (DC)')" class="px-6 py-3 rounded-full bg-neonBlue/10 hover:bg-neonBlue text-neonBlue hover:text-black font-orbitron font-bold text-xs border border-neonBlue/30 hover:border-neonBlue hover:shadow-neonB transition-all duration-300 flex items-center space-x-2">
+                                <span>🔍 Lihat Rajah Penuh</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- BAHAGIAN 2: APA ITU PENJANA ELEKTRIK -->
     <section id="penjana" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto space-y-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Left Visual (Generator Physics Animation) -->
@@ -633,6 +661,34 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- SUBSECTION BAHARU: RAJAH PENERANGAN PENJANA ELEKTRIK (DC) -->
+            <div class="pt-8 opacity-0 translate-y-8 transition-all duration-700 ease-out scroll-trigger-fade-up">
+                <div class="glassmorphism p-6 sm:p-8 rounded-3xl border border-neonBlue/30 shadow-neonB hover:shadow-neonBlue/30 transition-all duration-300">
+                    <h3 class="font-orbitron font-extrabold text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-neonCyan neon-text-blue mb-6">
+                        RAJAH PENERANGAN PENJANA ELEKTRIK (DC)
+                    </h3>
+                    <div class="w-full flex flex-col lg:flex-row gap-8 items-center">
+                        <div class="w-full lg:w-1/2 aspect-video overflow-hidden rounded-2xl border border-neonBlue/20 shadow-lg relative group">
+                            <img src="penjana.png" alt="Rajah Penerangan Penjana Elektrik (DC)" class="w-full h-full object-contain cursor-pointer transition-transform duration-500 hover:scale-[1.03]" onclick="openDiagramModal('penjana.png', 'RAJAH PENERANGAN PENJANA ELEKTRIK (DC)')">
+                            <!-- Overlay Petunjuk Zoom -->
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                <span class="px-4 py-2 rounded-full bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron font-semibold text-xs tracking-wider">
+                                    <i class="fas fa-search-plus mr-1"></i> LIHAT RAJAH PENUH
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-6">
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Rajah ini menerangkan struktur lengkap Penjana Elektrik DC termasuk komponen utama, arah arus elektrik yang dijanakan, medan magnet, gegelung, gelang gelincir serta proses penukaran tenaga mekanikal kepada tenaga elektrik.
+                            </p>
+                            <button onclick="openDiagramModal('penjana.png', 'RAJAH PENERANGAN PENJANA ELEKTRIK (DC)')" class="px-6 py-3 rounded-full bg-neonBlue/10 hover:bg-neonBlue text-neonBlue hover:text-black font-orbitron font-bold text-xs border border-neonBlue/30 hover:border-neonBlue hover:shadow-neonB transition-all duration-300 flex items-center space-x-2">
+                                <span>🔍 Lihat Rajah Penuh</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1189,7 +1245,7 @@
                             <span class="w-8 h-8 rounded-full bg-neonPurple/20 text-neonPurple flex items-center justify-center font-bold">1</span>
                             <div>
                                 <h4 class="font-bold text-white text-sm">Daya Luar Putaran</h4>
-                                <p class="text-xs text-slate-400">Gandar diputar secara manual, guna kinetik air empangan, atau tiupan kipas angin.</p>
+                                <p class="text-xs text-slate-400">Gegelung diputar secara manual, guna kinetik air empangan, atau tiupan kipas angin.</p>
                             </div>
                         </div>
 
@@ -1325,6 +1381,24 @@
             </div>
         </div>
     </section>
+
+    <!-- FULLSCREEN MODAL UNTUK PREVIEW GAMBAR RAJAH HD (Motor & Penjana) -->
+    <div id="diagramModal" class="fixed inset-0 z-50 hidden flex-col items-center justify-center bg-black/90 backdrop-blur-lg p-4 transition-all duration-300 opacity-0" onclick="checkCloseDiagramModal(event)">
+        <div id="diagramModalContent" class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center transform scale-95 transition-all duration-300">
+            <!-- Butang Tutup -->
+            <button id="closeDiagramModal" onclick="closeDiagramModal()" class="absolute -top-12 right-0 md:right-4 text-white hover:text-neonBlue transition-colors text-3xl font-orbitron font-extrabold focus:outline-none z-50" title="Tutup">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <!-- Wrapper Container untuk Pan & Zoom -->
+            <div id="diagramContainer" class="w-full max-h-[75vh] overflow-hidden rounded-2xl border border-white/10 bg-slate-950/80 flex items-center justify-center cursor-grab active:cursor-grabbing relative select-none">
+                <img id="diagramImg" src="" alt="Gambar Rajah HD" class="max-w-full max-h-[70vh] object-contain transition-transform duration-100 ease-out origin-center pointer-events-none">
+            </div>
+            <!-- Tajuk Dinamik -->
+            <h3 id="diagramTitle" class="mt-4 text-lg md:text-xl font-orbitron font-extrabold text-neonBlue neon-text-blue text-center tracking-wide uppercase select-none">
+                TAJUK RAJAH
+            </h3>
+        </div>
+    </div>
 
     <!-- FOOTER / RUJUKAN -->
     <footer class="py-12 border-t border-white/10 glassmorphism relative z-10 text-center">
@@ -1678,7 +1752,7 @@
 
             // Injected icon and simple key animation simulation
             const view = document.getElementById('komponen3DView');
-            view.innerHTML = `<i class="fas ${data.icon} text-neonBlue text-7xl animate-bounce"></i>`;
+            view.innerHTML = `<i class="fas ${data.icon} text-neonBlue text-7xl animate-spin-slow"></i>`;
 
             // Active button style
             const btns = document.querySelectorAll('.komponen-btn');
@@ -2156,6 +2230,176 @@
                 closeConceptModal();
             }
         }
+
+        // GSAP ScrollTrigger Fade Up Animasi untuk Subsection Baharu
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.utils.toArray(".scroll-trigger-fade-up").forEach((elem) => {
+                gsap.to(elem, {
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        // SISTEM MODAL GAMBAR RAJAH FULLSCREEN PREMIUM (Zoom & Pan)
+        const diagramModal = document.getElementById('diagramModal');
+        const diagramImg = document.getElementById('diagramImg');
+        const diagramTitle = document.getElementById('diagramTitle');
+        const diagramContainer = document.getElementById('diagramContainer');
+
+        let isDiagramModalOpen = false;
+        let dScale = 1;
+        let dPanning = false;
+        let dPointX = 0;
+        let dPointY = 0;
+        let dStart = { x: 0, y: 0 };
+        let dTouchStartTouches = [];
+        let initialTouchDist = 0;
+
+        function setDiagramTransform() {
+            diagramImg.style.transform = `translate(${dPointX}px, ${dPointY}px) scale(${dScale})`;
+        }
+
+        function openDiagramModal(src, title) {
+            diagramImg.src = src;
+            diagramTitle.textContent = title;
+            
+            // Set semula tetapan saiz & kedudukan koordinat
+            dScale = 1;
+            dPointX = 0;
+            dPointY = 0;
+            setDiagramTransform();
+
+            diagramModal.classList.remove('hidden');
+            diagramModal.classList.add('flex');
+            
+            setTimeout(() => {
+                diagramModal.classList.remove('opacity-0');
+                diagramModal.classList.add('opacity-100');
+                document.getElementById('diagramModalContent').classList.remove('scale-95');
+                document.getElementById('diagramModalContent').classList.add('scale-100');
+                isDiagramModalOpen = true;
+            }, 50);
+        }
+
+        function closeDiagramModal() {
+            diagramModal.classList.remove('opacity-100');
+            diagramModal.classList.add('opacity-0');
+            document.getElementById('diagramModalContent').classList.remove('scale-100');
+            document.getElementById('diagramModalContent').classList.add('scale-95');
+            setTimeout(() => {
+                diagramModal.classList.remove('flex');
+                diagramModal.classList.add('hidden');
+                isDiagramModalOpen = false;
+            }, 300);
+        }
+
+        // Tutup sekiranya klik di luar rajah
+        function checkCloseDiagramModal(event) {
+            if (event.target === diagramModal || event.target === diagramContainer) {
+                closeDiagramModal();
+            }
+        }
+
+        // Tutup guna butang ESC keyboard
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isDiagramModalOpen) {
+                closeDiagramModal();
+            }
+        });
+
+        // Sistem Drag & Pan untuk tetikus (PC)
+        diagramContainer.addEventListener('mousedown', function(e) {
+            if (e.button !== 0) return; // Klik kiri sahaja
+            e.preventDefault();
+            dPanning = true;
+            dStart = { x: e.clientX - dPointX, y: e.clientY - dPointY };
+            diagramContainer.style.cursor = 'grabbing';
+        });
+
+        window.addEventListener('mouseup', function() {
+            dPanning = false;
+            if (diagramContainer) {
+                diagramContainer.style.cursor = 'grab';
+            }
+        });
+
+        window.addEventListener('mousemove', function(e) {
+            if (!dPanning) return;
+            dPointX = (e.clientX - dStart.x);
+            dPointY = (e.clientY - dStart.y);
+            setDiagramTransform();
+        });
+
+        // Sistem Zum menggunakan Scroll Wheel tetikus
+        diagramContainer.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            const zoomIntensity = 0.15;
+            const rect = diagramContainer.getBoundingClientRect();
+            
+            const mouseX = e.clientX - rect.left - rect.width / 2;
+            const mouseY = e.clientY - rect.top - rect.height / 2;
+
+            const beforeZoomX = (mouseX - dPointX) / dScale;
+            const beforeZoomY = (mouseY - dPointY) / dScale;
+
+            const delta = e.deltaY < 0 ? 1 : -1;
+            dScale += delta * zoomIntensity * dScale;
+            dScale = Math.min(Math.max(0.5, dScale), 5); // Had skala minimum 0.5x, maksimum 5x
+
+            dPointX = mouseX - beforeZoomX * dScale;
+            dPointY = mouseY - beforeZoomY * dScale;
+
+            setDiagramTransform();
+        }, { passive: false });
+
+        // Sokongan Touch Drag-to-pan & Pinch-to-zoom untuk Peranti Mudah Alih
+        diagramContainer.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                dPanning = true;
+                dStart = { x: e.touches[0].clientX - dPointX, y: e.touches[0].clientY - dPointY };
+            } else if (e.touches.length === 2) {
+                dPanning = false;
+                initialTouchDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+            }
+        }, { passive: true });
+
+        diagramContainer.addEventListener('touchmove', function(e) {
+            if (e.touches.length === 1 && dPanning) {
+                dPointX = e.touches[0].clientX - dStart.x;
+                dPointY = e.touches[0].clientY - dStart.y;
+                setDiagramTransform();
+            } else if (e.touches.length === 2) {
+                const currentDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                if (initialTouchDist > 0) {
+                    const factor = currentDist / initialTouchDist;
+                    let newScale = dScale * factor;
+                    newScale = Math.min(Math.max(0.5, newScale), 5);
+                    dScale = newScale;
+                    initialTouchDist = currentDist;
+                    setDiagramTransform();
+                }
+            }
+        }, { passive: true });
+
+        diagramContainer.addEventListener('touchend', function(e) {
+            dPanning = false;
+            initialTouchDist = 0;
+        });
     </script>
 </body>
 </html>
