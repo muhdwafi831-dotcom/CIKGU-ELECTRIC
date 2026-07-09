@@ -857,7 +857,7 @@
                             <div>
                                 <h4 class="font-bold text-white text-sm">Fungsi Utama:</h4>
                                 <p id="komponenFungsi" class="text-sm text-slate-300 leading-relaxed">
-                                    Bahagian berputar dalam sistem elektromagnet. Ia membawa gegelung pengalir bagi mewujudkan daya gerakan apabila berinteraksi dengan medan magnet daripada stator.
+                                    Bahagian utama yang berputar di dalam motor elektrik. Mempunyai teras besi lembut berlapis untuk menampung gegelung dawai tembaga magnetik.
                                 </p>
                             </div>
                             
@@ -956,10 +956,10 @@
                 </p>
             </div>
 
-            <!-- Laws Grid (Updated to 2 columns since Ohm's law is removed) -->
+            <!-- Laws Grid (2 columns since Ohm's law is removed) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-                <!-- Law 2: Fleming Left Hand Rule (Motor) -->
+                <!-- Law 1: Fleming Left Hand Rule (Motor) -->
                 <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -996,7 +996,7 @@
                     </button>
                 </div>
 
-                <!-- Law 3: Fleming Right Hand Rule (Generator) -->
+                <!-- Law 2: Fleming Right Hand Rule (Generator) -->
                 <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -1009,6 +1009,17 @@
                                 <i class="fas fa-volume-up"></i>
                             </button>
                         </div>
+
+                        <!-- Rujukan Gambar fleming tangan kanan.png (Hukum Tangan Kanan Fleming) -->
+                        <div class="mb-4 rounded-xl overflow-hidden border border-neonYellow/30 aspect-video relative group cursor-pointer" onclick="openDiagramModal('fleming tangan kanan.png', 'HUKUM TANGAN KANAN FLEMING')">
+                            <img src="fleming tangan kanan.png" alt="Rujukan Hukum Tangan Kanan Fleming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-2.5 py-1 rounded bg-slate-900/80 border border-neonYellow text-neonYellow font-orbitron text-[10px] font-semibold">
+                                    <i class="fas fa-search-plus mr-1"></i> BESARKAN RAJAH
+                                </span>
+                            </div>
+                        </div>
+
                         <p class="text-xs text-slate-300 leading-relaxed mb-4">
                             Gunakan tangan kanan untuk penjanaan tenaga elektrik. Ibu jari = Arah Gerakan Aci (F), Jari Telunjuk = Medan Magnet (B), Jari Tengah = Arah Arus Teraruh (I).
                         </p>
@@ -1624,7 +1635,7 @@
         }
 
 
-        // PAPAR DETAIL HUKUM (Hukum Ohm, Fleming dll)
+        // PAPAR DETAIL HUKUM (Fleming dll)
         function paparDetailHukum(hukumKey) {
             let tajuk = "";
             let penerangan = "";
@@ -1635,11 +1646,12 @@
                 tajuk = "HUKUM TANGAN KIRI FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KIRI.\nLangkah 2: Telunjuk tunjuk arah medan magnet (U ke S).\nLangkah 3: Jari tengah ke arah arus.\nLangkah 4: Ibu jari menunjukkan arah tindakan daya pusingan.";
                 contoh = "Digunakan oleh kipas angin elektrik semasa ia mula berputar bila suis ditekan.";
-                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="111111.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
+                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="info tgn kiri fleming.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
             } else {
                 tajuk = "HUKUM TANGAN KANAN FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KANAN.\nLangkah 2: Ibu jari mengikut arah gerakan konduktor.\nLangkah 3: Telunjuk selari dengan medan magnet.\nLangkah 4: Jari tengah menunjukkan arah arus aruhan terhasil.";
                 contoh = "Turbin hidroelektrik besar menukar pusingan air sungai menjadi arus dijanakan keluar.";
+                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonYellow/30 max-h-48 flex justify-center"><img src="fleming tangan kanan.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kanan Fleming"></div>`;
             }
 
             // High Fidelity Dialog
@@ -2018,7 +2030,7 @@
         });
 
         // -----------------------------------------------------------
-        // TAMBAHAN BAHARU: LOGIK SISTEM NARASI (VOICE OVER)
+        // LOGIK SISTEM NARASI (VOICE OVER)
         // -----------------------------------------------------------
         let currentNarration = null;
         let currentNarrationBtn = null;
