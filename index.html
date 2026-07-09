@@ -153,7 +153,6 @@
     <audio id="narasi-perbezaan" src="letakkan_narasi_Perbezaan_Motor_Penjana_disini.mp3"></audio>
 
     <!-- Hukum & Teori -->
-    <audio id="narasi-ohm" src="letakkan_narasi_Hukum_Ohm_disini.mp3"></audio>
     <audio id="narasi-fleming-kiri" src="letakkan_narasi_Hukum_Tangan_Kiri_disini.mp3"></audio>
     <audio id="narasi-fleming-kanan" src="letakkan_narasi_Hukum_Tangan_Kanan_disini.mp3"></audio>
 
@@ -957,35 +956,9 @@
                 </p>
             </div>
 
-            <!-- Laws Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Laws Grid (Updated to 2 columns since Ohm's law is removed) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-                <!-- Law 1: Ohm's Law -->
-                <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="px-2.5 py-1 rounded bg-neonBlue/15 text-neonBlue text-xs font-bold">FORMULA: V = I × R</span>
-                            <i class="fas fa-brain text-neonBlue"></i>
-                        </div>
-                        <div class="flex justify-between items-start mb-2 gap-2">
-                            <h3 class="font-orbitron font-extrabold text-xl text-white">Hukum Ohm</h3>
-                            <button onclick="toggleNarration(event, 'narasi-ohm', this)" class="w-8 h-8 rounded-full bg-neonBlue/10 border border-neonBlue/30 text-neonBlue hover:bg-neonBlue hover:text-black hover:shadow-neonB transition-all flex items-center justify-center shrink-0" title="Dengar Narasi">
-                                <i class="fas fa-volume-up"></i>
-                            </button>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
-                            Menghubungkaitkan antara Voltan (V), Arus (I), dan Rintangan (R). Arus berkadar terus dengan voltan dan berkadar songsang dengan rintangan elektrik.
-                        </p>
-                        
-                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/5 text-center text-xs text-neonYellow mb-4">
-                            <strong>Aplikasi:</strong> Menentukan jumlah arus masuk yang selamat ke dalam litar gegelung motor elektrik bagi mengelakkan litar pintas.
-                        </div>
-                    </div>
-                    <button onclick="paparDetailHukum('ohm')" class="w-full py-2.5 rounded-lg bg-neonBlue/20 text-neonBlue font-semibold text-xs border border-neonBlue/40 hover:bg-neonBlue/40 transition">
-                        Penerangan Langkah demi Langkah
-                    </button>
-                </div>
-
                 <!-- Law 2: Fleming Left Hand Rule (Motor) -->
                 <div class="glass-card p-6 rounded-3xl border border-white/10 flex flex-col justify-between">
                     <div>
@@ -1658,15 +1631,11 @@
             let contoh = "";
             let imgHTML = "";
             
-            if (hukumKey === 'ohm') {
-                tajuk = "HUKUM OHM";
-                penerangan = "Langkah 1: Menghubungkan voltan dan arus elektrik.\nLangkah 2: Menentukan rintangan dawai kuprum.\nLangkah 3: Formula matematik ialah V = I × R.";
-                contoh = "Pengecas telefon pintar melaras voltan agar bateri dicas dengan arus optimum tanpa merosakkan litar.";
-            } else if (hukumKey === 'fleming-kiri') {
+            if (hukumKey === 'fleming-kiri') {
                 tajuk = "HUKUM TANGAN KIRI FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KIRI.\nLangkah 2: Telunjuk tunjuk arah medan magnet (U ke S).\nLangkah 3: Jari tengah ke arah arus.\nLangkah 4: Ibu jari menunjukkan arah tindakan daya pusingan.";
                 contoh = "Digunakan oleh kipas angin elektrik semasa ia mula berputar bila suis ditekan.";
-                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="info tgn kiri fleming.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
+                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="111111.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
             } else {
                 tajuk = "HUKUM TANGAN KANAN FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KANAN.\nLangkah 2: Ibu jari mengikut arah gerakan konduktor.\nLangkah 3: Telunjuk selari dengan medan magnet.\nLangkah 4: Jari tengah menunjukkan arah arus aruhan terhasil.";
