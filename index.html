@@ -19,9 +19,6 @@
     <!-- GSAP (GreenSock Animation Platform) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Three.js (3D Library) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
     <script>
         tailwind.config = {
@@ -159,8 +156,8 @@
     <!-- Aplikasi -->
     <audio id="narasi-kipas" src="letakkan_narasi_Aplikasi_Kipas_disini.mp3"></audio>
     <audio id="narasi-dinamo" src="letakkan_narasi_Aplikasi_Dinamo_disini.mp3"></audio>
-    <audio id="narasi-ev" src="letakkan_narasi_Aplikasi_EV_disini.mp3"></audio>
     <audio id="narasi-empangan" src="letakkan_narasi_Aplikasi_Empangan_disini.mp3"></audio>
+    <audio id="narasi-pam-air" src="letakkan_narasi_Aplikasi_Pam_Air_disini.mp3"></audio>
     <!-- TAMAT TAPAK AUDIO NARASI -->
 
     <!-- Background Music & Floating Bar -->
@@ -195,11 +192,10 @@
             <nav class="hidden xl:flex flex-wrap justify-center items-center space-x-1 text-sm font-medium">
                 <a href="#konsep" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Mula Belajar</a>
                 <a href="#motor" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Nota RBT</a>
-                <a href="#video-seksyen" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Video</a>
                 <a href="#perbezaan" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Motor vs Penjana</a>
                 <a href="#hukum" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Hukum</a>
                 <a href="#aplikasi" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Aplikasi</a>
-                <a href="#galeri" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Galeri 3D</a>
+                <a href="#video-seksyen" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Video</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -212,11 +208,10 @@
         <div id="mobileMenu" class="hidden xl:hidden bg-darkBg/95 border-b border-white/10 px-4 pt-2 pb-6 space-y-2">
             <a href="#konsep" class="block py-2 text-slate-300 hover:text-neonBlue">Mula Belajar</a>
             <a href="#motor" class="block py-2 text-slate-300 hover:text-neonBlue">Nota RBT</a>
-            <a href="#video-seksyen" class="block py-2 text-slate-300 hover:text-neonBlue">Video</a>
             <a href="#perbezaan" class="block py-2 text-slate-300 hover:text-neonBlue">Motor vs Penjana</a>
             <a href="#hukum" class="block py-2 text-slate-300 hover:text-neonBlue">Hukum</a>
             <a href="#aplikasi" class="block py-2 text-slate-300 hover:text-neonBlue">Aplikasi</a>
-            <a href="#galeri" class="block py-2 text-slate-300 hover:text-neonBlue">Galeri 3D</a>
+            <a href="#video-seksyen" class="block py-2 text-slate-300 hover:text-neonBlue">Video</a>
         </div>
     </header>
 
@@ -250,13 +245,13 @@
                     <i class="fas fa-book-open text-neonPurple text-2xl mb-2"></i>
                     <span class="text-xs font-semibold">Nota RBT</span>
                 </a>
-                <a href="#video-seksyen" class="glass-card p-4 rounded-xl flex flex-col items-center justify-center hover:border-neonYellow text-center transition">
-                    <i class="fas fa-video text-neonYellow text-2xl mb-2"></i>
-                    <span class="text-xs font-semibold">Video</span>
+                <a href="#hukum" class="glass-card p-4 rounded-xl flex flex-col items-center justify-center hover:border-neonYellow text-center transition">
+                    <i class="fas fa-scale-balanced text-neonYellow text-2xl mb-2"></i>
+                    <span class="text-xs font-semibold">Hukum</span>
                 </a>
-                <a href="#galeri" class="glass-card p-4 rounded-xl flex flex-col items-center justify-center hover:border-emerald-400 text-center transition">
-                    <i class="fas fa-cube text-emerald-400 text-2xl mb-2"></i>
-                    <span class="text-xs font-semibold">Eksplorasi 3D</span>
+                <a href="#aplikasi" class="glass-card p-4 rounded-xl flex flex-col items-center justify-center hover:border-emerald-400 text-center transition">
+                    <i class="fas fa-lightbulb text-emerald-400 text-2xl mb-2"></i>
+                    <span class="text-xs font-semibold">Aplikasi</span>
                 </a>
             </div>
         </div>
@@ -857,7 +852,7 @@
                             <div>
                                 <h4 class="font-bold text-white text-sm">Fungsi Utama:</h4>
                                 <p id="komponenFungsi" class="text-sm text-slate-300 leading-relaxed">
-                                    Bahagian utama yang berputar di dalam motor elektrik. Mempunyai teras besi lembut berlapis untuk menampung gegelung dawai tembaga magnetik.
+                                    Bahagian berputar dalam sistem elektromagnet. Ia membawa gegelung pengalir bagi mewujudkan daya gerakan apabila berinteraksi dengan medan magnet daripada stator.
                                 </p>
                             </div>
                             
@@ -1069,10 +1064,15 @@
                     </div>
                 </div>
 
-                <!-- App Item 2 -->
+                <!-- App Item 2: DINAMO BASIKAL LAMA -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-44 bg-gradient-to-br from-blue-900/30 to-purple-900/20 flex items-center justify-center relative">
-                        <i class="fas fa-car-battery text-neonPurple text-6xl group-hover:scale-110 transition-transform"></i>
+                    <div class="h-44 relative cursor-pointer overflow-hidden border-b border-white/10" onclick="openDiagramModal('dinamo.png', 'SISTEM DINAMO BASIKAL')">
+                        <img src="dinamo.png" alt="Dinamo Basikal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="px-3 py-1 rounded-full bg-slate-900/80 border border-neonPurple text-neonPurple font-orbitron font-semibold text-[10px] tracking-wider shadow-neonP">
+                                <i class="fas fa-search-plus mr-1"></i> LIHAT RAJAH
+                            </span>
+                        </div>
                     </div>
                     <div class="p-5">
                         <span class="text-[10px] font-bold text-neonPurple font-orbitron">SISTEM DINAMO</span>
@@ -1086,27 +1086,15 @@
                     </div>
                 </div>
 
-                <!-- App Item 3 -->
+                <!-- App Item 3: EMPANGAN HIDROELEKTRIK -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-44 bg-gradient-to-br from-blue-900/30 to-purple-900/20 flex items-center justify-center relative">
-                        <i class="fas fa-car text-neonYellow text-6xl group-hover:translate-x-4 transition-transform"></i>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[10px] font-bold text-neonYellow font-orbitron">MOTOR DC BERKEMBAR</span>
-                        <div class="flex justify-between items-center mt-1">
-                            <h4 class="font-bold text-white text-base">Kereta Elektrik (EV)</h4>
-                            <button onclick="toggleNarration(event, 'narasi-ev', this)" class="w-7 h-7 rounded-full bg-neonYellow/10 border border-neonYellow/30 text-neonYellow hover:bg-neonYellow hover:text-black hover:shadow-neonY transition-all flex items-center justify-center shrink-0" title="Dengar Narasi">
-                                <i class="fas fa-volume-up text-xs"></i>
-                            </button>
+                    <div class="h-44 relative cursor-pointer overflow-hidden border-b border-white/10" onclick="openDiagramModal('hidroelektrik.png', 'EMPANGAN HIDROELEKTRIK')">
+                        <img src="hidroelektrik.png" alt="Empangan Hidroelektrik" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="px-3 py-1 rounded-full bg-slate-900/80 border border-emerald-400 text-emerald-400 font-orbitron font-semibold text-[10px] tracking-wider shadow-lg">
+                                <i class="fas fa-search-plus mr-1"></i> LIHAT RAJAH
+                            </span>
                         </div>
-                        <p class="text-xs text-slate-400 mt-2">Bateri litium-ion menyalurkan kuasa besar ke motor elektrik untuk memutar gandar tayar dengan kecekapan tanpa bunyi bising.</p>
-                    </div>
-                </div>
-
-                <!-- App Item 4 -->
-                <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-44 bg-gradient-to-br from-blue-900/30 to-purple-900/20 flex items-center justify-center relative">
-                        <i class="fas fa-water text-emerald-400 text-6xl group-hover:translate-y-2 transition-transform"></i>
                     </div>
                     <div class="p-5">
                         <span class="text-[10px] font-bold text-emerald-400 font-orbitron">TURBIN ARUHAN</span>
@@ -1117,6 +1105,28 @@
                             </button>
                         </div>
                         <p class="text-xs text-slate-400 mt-2">Aliran air deras memutarkan bilah turbin gergasi, menukarkan tenaga mekanikal graviti kepada megawatt kuasa elektrik negara.</p>
+                    </div>
+                </div>
+
+                <!-- App Item 4: PAM AIR ELEKTRIK -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="h-44 relative cursor-pointer overflow-hidden border-b border-white/10" onclick="openDiagramModal('pam air.png', 'PAM AIR ELEKTRIK')">
+                        <img src="pam air.png" alt="Pam Air Elektrik" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="px-3 py-1 rounded-full bg-slate-900/80 border border-neonCyan text-neonCyan font-orbitron font-semibold text-[10px] tracking-wider shadow-lg">
+                                <i class="fas fa-search-plus mr-1"></i> LIHAT RAJAH
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] font-bold text-neonCyan font-orbitron">MOTOR PAM</span>
+                        <div class="flex justify-between items-center mt-1">
+                            <h4 class="font-bold text-white text-base">Pam Air Elektrik</h4>
+                            <button onclick="toggleNarration(event, 'narasi-pam-air', this)" class="w-7 h-7 rounded-full bg-neonCyan/10 border border-neonCyan/30 text-neonCyan hover:bg-neonCyan hover:text-black hover:shadow-neonB transition-all flex items-center justify-center shrink-0" title="Dengar Narasi">
+                                <i class="fas fa-volume-up text-xs"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Motor elektrik menukarkan tenaga elektrik kepada tenaga mekanikal untuk menggerakkan pendesak dan mengalirkan air.</p>
                     </div>
                 </div>
 
@@ -1151,161 +1161,9 @@
                         VIDEO PEMBELAJARAN
                     </h2>
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Sila tonton video penerangan interaktif bagi meningkatkan visualisasi anda terhadap daya magnetik dan pemotongan garisan fluks magnet.
+                        Sila tonton video untuk penerangan secara interaktif.
                     </p>
-                    
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3 text-xs">
-                            <i class="fas fa-check-circle text-neonBlue mt-0.5"></i>
-                            <span class="text-slate-300"><strong>Objektif 1:</strong> Memahami gerakan elektron konduktor.</span>
-                        </div>
-                        <div class="flex items-start space-x-3 text-xs">
-                            <i class="fas fa-check-circle text-neonBlue mt-0.5"></i>
-                            <span class="text-slate-300"><strong>Objektif 2:</strong> Mengingati 7 komponen mekanikal motor.</span>
-                        </div>
-                        <div class="flex items-start space-x-3 text-xs">
-                            <i class="fas fa-check-circle text-neonBlue mt-0.5"></i>
-                            <span class="text-slate-300"><strong>Objektif 3:</strong> Membezakan arus ulang-alik (AC) dan arus terus (DC).</span>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BAHAGIAN 10: GALERI 3D INTERAKTIF -->
-    <section id="galeri" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-orbitron font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonBlue via-pink-500 to-neonYellow neon-text-blue">
-                    GALERI SIMULATOR 3D DIGITAL
-                </h2>
-                <div class="h-1 w-24 bg-gradient-to-r from-neonBlue to-neonYellow mx-auto my-4 rounded-full"></div>
-                <p class="text-slate-300">
-                    Gunakan kawalan tetikus untuk interaksi sepenuhnya terhadap dua kategori model di bawah.
-                </p>
-            </div>
-
-            <!-- Grid Selection -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-                
-                <div onclick="pilihModelModel('motor-dc')" class="model-select-card cursor-pointer p-4 rounded-2xl glassmorphism border border-neonBlue/50 text-center hover:shadow-neonB transition">
-                    <i class="fas fa-cube text-neonBlue text-3xl mb-3"></i>
-                    <h4 class="font-orbitron font-bold text-sm">Motor Arus Terus (DC)</h4>
-                    <span class="text-[10px] text-neonBlue">Sedia untuk diteroka</span>
-                </div>
-
-                <div onclick="pilihModelModel('penjana')" class="model-select-card cursor-pointer p-4 rounded-2xl glassmorphism border border-white/5 text-center hover:shadow-neonP transition">
-                    <i class="fas fa-charging-station text-neonPurple text-3xl mb-3"></i>
-                    <h4 class="font-orbitron font-bold text-sm">Penjana Elektrik</h4>
-                    <span class="text-[10px] text-slate-400">Teroka di sini</span>
-                </div>
-
-            </div>
-
-            <!-- Big 3D canvas viewport -->
-            <div class="mt-8 rounded-3xl glassmorphism border border-white/10 p-6 relative max-w-4xl mx-auto">
-                <div class="absolute top-4 left-4 z-10">
-                    <span id="modelAktifLabel" class="px-3 py-1 rounded bg-slate-900 text-neonYellow font-orbitron text-xs font-semibold border border-neonYellow/30">
-                        MODEL SEKARANG: MOTOR ARUS TERUS (DC)
-                    </span>
-                </div>
-
-                <!-- Simulation Interactive Viewport -->
-                <div class="w-full h-96 rounded-2xl bg-black/40 flex items-center justify-center relative overflow-hidden">
-                    <!-- Dynamic rendering engine canvas container -->
-                    <div id="galeriCanvas3D" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
-                </div>
-                <div class="text-center text-xs text-slate-400 mt-4">
-                    <p><i class="fas fa-sync mr-1"></i> Gunakan butang tetikus kiri untuk memusingkan, butang kanan untuk menggerakkan (pan), serta skrol untuk zum model.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BAHAGIAN 11: INFOGRAFIK MODEN -->
-    <section id="infografik" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-orbitron font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonYellow via-neonCyan to-neonBlue neon-text-blue">
-                    INFOGRAFIK ALIRAN KUASA & PROSES
-                </h2>
-                <div class="h-1 w-24 bg-gradient-to-r from-neonYellow to-neonBlue mx-auto my-4 rounded-full"></div>
-                <p class="text-slate-300">
-                    Grafik visual ringkas bagi memudahkan anda merumuskan proses keseluruhan bab ini.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Infographic Card 1: Motor -->
-                <div class="glass-card p-6 rounded-3xl border border-white/10">
-                    <h3 class="font-orbitron font-bold text-lg text-neonBlue mb-4 flex items-center justify-between">
-                        <span>INFOGRAFIK ALIRAN MOTOR ELEKTRIK</span>
-                        <i class="fas fa-exchange-alt"></i>
-                    </h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4 p-3 bg-slate-950/60 rounded-xl border border-white/5">
-                            <span class="w-8 h-8 rounded-full bg-neonBlue/20 text-neonBlue flex items-center justify-center font-bold">1</span>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Sumber Kuasa</h4>
-                                <p class="text-xs text-slate-400">Tenaga elektrik disalurkan daripada sel kering atau bekalan utama domestik.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center space-x-4 p-3 bg-slate-950/60 rounded-xl border border-white/5">
-                            <span class="w-8 h-8 rounded-full bg-neonBlue/20 text-neonBlue flex items-center justify-center font-bold">2</span>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Laluan Komutator</h4>
-                                <p class="text-xs text-slate-400">Arus masuk melalui berus karbon dan komutator bagi mengekalkan arah putaran sekata.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center space-x-4 p-3 bg-slate-950/60 rounded-xl border border-white/5">
-                            <span class="w-8 h-8 rounded-full bg-neonBlue/20 text-neonBlue flex items-center justify-center font-bold">3</span>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Pemotongan Medan Magnet</h4>
-                                <p class="text-xs text-slate-400">Gegelung konduktor menerima arus elektrik dan terhasil daya putaran yang memutar gandar kipas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Infographic Card 2: Generator -->
-                <div class="glass-card p-6 rounded-3xl border border-white/10">
-                    <h3 class="font-orbitron font-bold text-lg text-neonPurple mb-4 flex items-center justify-between">
-                        <span>INFOGRAFIK ALIRAN PENJANA ELEKTRIK</span>
-                        <i class="fas fa-charging-station"></i>
-                    </h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4 p-3 bg-slate-950/60 rounded-xl border border-white/5">
-                            <span class="w-8 h-8 rounded-full bg-neonPurple/20 text-neonPurple flex items-center justify-center font-bold">1</span>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Daya Luar Putaran</h4>
-                                <p class="text-xs text-slate-400">Gegelung diputar secara manual, guna kinetik air empangan, atau tiupan kipas angin.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center space-x-4 p-3 bg-slate-950/60 rounded-xl border border-white/5">
-                            <span class="w-8 h-8 rounded-full bg-neonPurple/20 text-neonPurple flex items-center justify-center font-bold">2</span>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Garisan Magnet Dipotong</h4>
-                                <p class="text-xs text-slate-400">Gegelung tembaga memotong fluks magnet stator bagi mewujudkan daya gerak elektrik aruhan.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center space-x-4 p-3 bg-slate-950/60 rounded-xl border border-white/5">
-                            <span class="w-8 h-8 rounded-full bg-neonPurple/20 text-neonPurple flex items-center justify-center font-bold">3</span>
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Arus Dijanakan Keluar</h4>
-                                <p class="text-xs text-slate-400">Sistem gelang gelincir menyalurkan elektrik keluar untuk disimpan atau membekalkan beban lampu.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -1646,7 +1504,7 @@
                 tajuk = "HUKUM TANGAN KIRI FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KIRI.\nLangkah 2: Telunjuk tunjuk arah medan magnet (U ke S).\nLangkah 3: Jari tengah ke arah arus.\nLangkah 4: Ibu jari menunjukkan arah tindakan daya pusingan.";
                 contoh = "Digunakan oleh kipas angin elektrik semasa ia mula berputar bila suis ditekan.";
-                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="info tgn kiri fleming.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
+                imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="111111.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
             } else {
                 tajuk = "HUKUM TANGAN KANAN FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KANAN.\nLangkah 2: Ibu jari mengikut arah gerakan konduktor.\nLangkah 3: Telunjuk selari dengan medan magnet.\nLangkah 4: Jari tengah menunjukkan arah arus aruhan terhasil.";
@@ -1680,117 +1538,6 @@
                 </div>
             `;
             document.body.appendChild(dialog);
-        }
-
-
-        // GALERI 3D VIEWPORT ENGINE SETUP
-        const galeriContainer = document.getElementById('galeriCanvas3D');
-        const galeriScene = new THREE.Scene();
-        const galeriCamera = new THREE.PerspectiveCamera(45, galeriContainer.clientWidth / galeriContainer.clientHeight, 0.1, 1000);
-        const galeriRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        
-        galeriRenderer.setSize(galeriContainer.clientWidth, galeriContainer.clientHeight);
-        galeriRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        galeriContainer.appendChild(galeriRenderer.domElement);
-
-        // Simple light
-        const galeriAmbientLight = new THREE.AmbientLight(0xffffff, 0.8);
-        galeriScene.add(galeriAmbientLight);
-
-        const galeriLight = new THREE.PointLight(0xfacc15, 2, 50);
-        galeriLight.position.set(4, 4, 4);
-        galeriScene.add(galeriLight);
-
-        // Group container for swap models
-        const activeModelGroup = new THREE.Group();
-        galeriScene.add(activeModelGroup);
-        galeriCamera.position.z = 5;
-
-        // Start model with Motor DC
-        let customBox;
-        function update3DModel(type) {
-            // Clear current objects
-            while(activeModelGroup.children.length > 0){ 
-                activeModelGroup.remove(activeModelGroup.children[0]); 
-            }
-
-            if (type === 'motor-dc') {
-                const geo = new THREE.BoxGeometry(1.5, 1.5, 1.5);
-                const mat = new THREE.MeshStandardMaterial({ color: 0x00f0ff, roughness: 0.2, metalness: 0.8 });
-                customBox = new THREE.Mesh(geo, mat);
-                activeModelGroup.add(customBox);
-            } else if (type === 'penjana') {
-                const geo = new THREE.CylinderGeometry(1, 1, 2, 32);
-                const mat = new THREE.MeshStandardMaterial({ color: 0xd946ef, roughness: 0.1, metalness: 0.9 });
-                customBox = new THREE.Mesh(geo, mat);
-                customBox.rotation.x = Math.PI / 2;
-                activeModelGroup.add(customBox);
-            }
-        }
-        update3DModel('motor-dc');
-
-        // Mouse controller for Galeri
-        let isGaleriMouseDown = false;
-        let prevGalMouseX = 0;
-        let prevGalMouseY = 0;
-
-        galeriContainer.addEventListener('mousedown', (e) => {
-            isGaleriMouseDown = true;
-            prevGalMouseX = e.clientX;
-            prevGalMouseY = e.clientY;
-        });
-
-        window.addEventListener('mouseup', () => {
-            isGaleriMouseDown = false;
-        });
-
-        galeriContainer.addEventListener('mousemove', (e) => {
-            if (!isGaleriMouseDown) return;
-            const deltaX = e.clientX - prevGalMouseX;
-            const deltaY = e.clientY - prevGalMouseY;
-            
-            activeModelGroup.rotation.y += deltaX * 0.007;
-            activeModelGroup.rotation.x += deltaY * 0.007;
-            
-            prevGalMouseX = e.clientX;
-            prevGalMouseY = e.clientY;
-        });
-
-        // Loop galeri animation
-        function animateGaleri() {
-            requestAnimationFrame(animateGaleri);
-            if (customBox) {
-                customBox.rotation.y += 0.005;
-            }
-            galeriRenderer.render(galeriScene, galeriCamera);
-        }
-        animateGaleri();
-
-        // Swap Models Selection
-        function pilihModelModel(modelKey) {
-            const label = document.getElementById('modelAktifLabel');
-            let labelTeks = "";
-
-            if (modelKey === 'motor-dc') labelTeks = "MODEL SEKARANG: MOTOR ARUS TERUS (DC)";
-            else if (modelKey === 'penjana') labelTeks = "MODEL SEKARANG: PENJANA ELEKTRIK";
-
-            label.textContent = labelTeks;
-            update3DModel(modelKey);
-
-            // Active visual card
-            const cards = document.querySelectorAll('.model-select-card');
-            cards.forEach(c => {
-                c.classList.remove('border-neonBlue/50', 'border-neonPurple/50');
-                c.classList.add('border-white/5');
-            });
-
-            const activeCard = event.currentTarget;
-            activeCard.classList.remove('border-white/5');
-            if (modelKey === 'motor-dc') {
-                activeCard.classList.add('border-neonBlue/50');
-            } else {
-                activeCard.classList.add('border-neonPurple/50');
-            }
         }
 
         // FUNGSI NOTA INTERAKTIF MODAL (Bahagian Konsep Asas)
