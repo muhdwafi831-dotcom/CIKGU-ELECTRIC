@@ -19,7 +19,7 @@
     <!-- GSAP (GreenSock Animation Platform) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -171,7 +171,7 @@
         </div>
     </div>
     <!-- Muzik Santai (Chill/Lo-Fi) -->
-    <audio id="bgMusic" loop src="chill.mp3"></audio>
+    <audio id="bgMusic" loop src="https://assets.codepen.io/4358584/chill.mp3"></audio>
 
     <!-- HEADER / NAVIGATION (Glassmorphic & Responsive) -->
     <header class="sticky top-0 w-full z-40 glassmorphism border-b border-white/10">
@@ -192,10 +192,10 @@
             <nav class="hidden xl:flex flex-wrap justify-center items-center space-x-1 text-sm font-medium">
                 <a href="#konsep" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Mula Belajar</a>
                 <a href="#motor" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Nota RBT</a>
+                <a href="#video-seksyen" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Video</a>
                 <a href="#perbezaan" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Motor vs Penjana</a>
                 <a href="#hukum" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Hukum</a>
                 <a href="#aplikasi" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Aplikasi</a>
-                <a href="#video-seksyen" class="px-3 py-2 text-slate-300 hover:text-neonBlue transition">Video</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -208,10 +208,10 @@
         <div id="mobileMenu" class="hidden xl:hidden bg-darkBg/95 border-b border-white/10 px-4 pt-2 pb-6 space-y-2">
             <a href="#konsep" class="block py-2 text-slate-300 hover:text-neonBlue">Mula Belajar</a>
             <a href="#motor" class="block py-2 text-slate-300 hover:text-neonBlue">Nota RBT</a>
+            <a href="#video-seksyen" class="block py-2 text-slate-300 hover:text-neonBlue">Video</a>
             <a href="#perbezaan" class="block py-2 text-slate-300 hover:text-neonBlue">Motor vs Penjana</a>
             <a href="#hukum" class="block py-2 text-slate-300 hover:text-neonBlue">Hukum</a>
             <a href="#aplikasi" class="block py-2 text-slate-300 hover:text-neonBlue">Aplikasi</a>
-            <a href="#video-seksyen" class="block py-2 text-slate-300 hover:text-neonBlue">Video</a>
         </div>
     </header>
 
@@ -772,7 +772,7 @@
             <!-- RAJAH RUJUKAN UTAMA KOMPONEN MOTOR ELEKTRIK (Gemini_Generated_Image_obky7jobky7jobky.png) -->
             <div class="mb-12 max-w-4xl mx-auto glassmorphism p-6 rounded-3xl border border-neonBlue/30 shadow-neonB">
                 <h3 class="font-orbitron font-extrabold text-lg sm:text-xl text-center text-neonBlue neon-text-blue mb-4 uppercase">
-                    Rajah Rujukan Utama Komponen Motor Elektrik
+                    Rajah Rujukan Utama Komponen Motor / Penjana
                 </h3>
                 <div class="aspect-[21/9] w-full overflow-hidden rounded-2xl border border-white/10 relative group cursor-pointer" onclick="openDiagramModal('Gemini_Generated_Image_obky7jobky7jobky.png', 'RAJAH RUJUKAN UTAMA KOMPONEN MOTOR ELEKTRIK')">
                     <img src="Gemini_Generated_Image_obky7jobky7jobky.png" alt="Rujukan Utama Komponen Motor" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]">
@@ -787,17 +787,7 @@
                 </p>
             </div>
 
-            <!-- Tab Selector -->
-            <div class="flex justify-center space-x-4 mb-8">
-                <button id="tabMotorBtn" class="px-6 py-3 rounded-full bg-neonBlue/20 border border-neonBlue/50 text-neonBlue font-orbitron font-bold text-sm tracking-wider hover:bg-neonBlue/30 transition-all shadow-neonB">
-                    KOMPONEN MOTOR ELEKTRIK
-                </button>
-                <button id="tabPenjanaBtn" class="px-6 py-3 rounded-full bg-slate-900 border border-white/10 text-slate-400 font-orbitron font-bold text-sm tracking-wider hover:text-white transition-all">
-                    KOMPONEN PENJANA ELEKTRIK
-                </button>
-            </div>
-
-            <!-- KOMPONEN MOTOR CONTENT VIEW -->
+            <!-- KOMPONEN GABUNGAN CONTENT VIEW -->
             <div id="komponenMotorSection" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 <!-- Left: List of Components (Interactive buttons) -->
@@ -811,7 +801,7 @@
                         <i class="fas fa-chevron-right text-slate-500"></i>
                     </button>
                     <button onclick="pilihKomponen('komutator')" class="komponen-btn w-full text-left p-4 rounded-xl glassmorphism border border-white/5 flex items-center justify-between hover:border-neonBlue transition-all">
-                        <span class="font-orbitron font-bold text-sm text-white">3. KOMUTATOR</span>
+                        <span class="font-orbitron font-bold text-sm text-white">3. KOMUTATOR / GELANG GELINCIR</span>
                         <i class="fas fa-chevron-right text-slate-500"></i>
                     </button>
                     <button onclick="pilihKomponen('berus')" class="komponen-btn w-full text-left p-4 rounded-xl glassmorphism border border-white/5 flex items-center justify-between hover:border-neonBlue transition-all">
@@ -832,7 +822,7 @@
                     </button>
                 </div>
 
-                <!-- Right: Component Details Card & 3D Interactive Mock Canvas -->
+                <!-- Right: Component Details Card & Interactive Canvas -->
                 <div class="lg:col-span-7 glassmorphism p-6 rounded-3xl border border-white/10">
                     <div id="komponenDetailBox" class="space-y-6">
                         <div class="flex items-center justify-between">
@@ -840,9 +830,8 @@
                             <span class="px-3 py-1 rounded-full bg-neonBlue/20 text-neonBlue text-xs font-bold">AKTIF</span>
                         </div>
                         
-                        <!-- Mini Simulation Visual Representation -->
+                        <!-- Visual Representation Area -->
                         <div class="w-full h-56 rounded-2xl bg-slate-950/80 border border-white/5 flex items-center justify-center relative overflow-hidden">
-                            <!-- Simulated Component Render -->
                             <div id="komponen3DView" class="w-full h-full flex items-center justify-center">
                                 <i class="fas fa-cog text-neonBlue text-7xl animate-spin-slow"></i>
                             </div>
@@ -864,70 +853,6 @@
                                 <div>
                                     <span class="text-slate-400 block">Bahan Buatan</span>
                                     <strong id="komponenBahan" class="text-white text-sm">Teras Besi Berlapisan & Tembaga</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KOMPONEN PENJANA CONTENT VIEW (Hidden by default) -->
-            <div id="komponenPenjanaSection" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Left: List of Components (Interactive buttons) -->
-                <div class="lg:col-span-5 space-y-2 max-h-[500px] overflow-y-auto pr-2">
-                    <button onclick="pilihKomponenPenjana('rotor-p')" class="komponen-p-btn active w-full text-left p-4 rounded-xl glassmorphism border border-neonPurple/50 bg-neonPurple/10 flex items-center justify-between hover:border-neonPurple transition-all">
-                        <span class="font-orbitron font-bold text-sm text-neonPurple">1. ROTOR PENJANA</span>
-                        <i class="fas fa-chevron-right text-neonPurple"></i>
-                    </button>
-                    <button onclick="pilihKomponenPenjana('stator-p')" class="komponen-p-btn w-full text-left p-4 rounded-xl glassmorphism border border-white/5 flex items-center justify-between hover:border-neonPurple transition-all">
-                        <span class="font-orbitron font-bold text-sm text-white">2. STATOR PENJANA</span>
-                        <i class="fas fa-chevron-right text-slate-500"></i>
-                    </button>
-                    <button onclick="pilihKomponenPenjana('slipring')" class="komponen-p-btn w-full text-left p-4 rounded-xl glassmorphism border border-white/5 flex items-center justify-between hover:border-neonPurple transition-all">
-                        <span class="font-orbitron font-bold text-sm text-white">3. GELANG GELINCIR (SLIP RING)</span>
-                        <i class="fas fa-chevron-right text-slate-500"></i>
-                    </button>
-                    <button onclick="pilihKomponenPenjana('bearing')" class="komponen-p-btn w-full text-left p-4 rounded-xl glassmorphism border border-white/5 flex items-center justify-between hover:border-neonPurple transition-all">
-                        <span class="font-orbitron font-bold text-sm text-white">4. GALAS (BEARING)</span>
-                        <i class="fas fa-chevron-right text-slate-500"></i>
-                    </button>
-                    <button onclick="pilihKomponenPenjana('perumah')" class="komponen-p-btn w-full text-left p-4 rounded-xl glassmorphism border border-white/5 flex items-center justify-between hover:border-neonPurple transition-all">
-                        <span class="font-orbitron font-bold text-sm text-white">5. PERUMAH (HOUSING)</span>
-                        <i class="fas fa-chevron-right text-slate-500"></i>
-                    </button>
-                </div>
-
-                <!-- Right: Component Details Card -->
-                <div class="lg:col-span-7 glassmorphism p-6 rounded-3xl border border-white/10">
-                    <div id="komponenPenjanaDetailBox" class="space-y-6">
-                        <div class="flex items-center justify-between">
-                            <h3 id="komponenPenjanaNama" class="text-2xl font-orbitron font-bold text-neonPurple">ROTOR PENJANA</h3>
-                            <span class="px-3 py-1 rounded-full bg-neonPurple/20 text-neonPurple text-xs font-bold">AKTIF</span>
-                        </div>
-                        
-                        <div class="w-full h-56 rounded-2xl bg-slate-950/80 border border-white/5 flex items-center justify-center relative overflow-hidden">
-                            <div id="komponenPenjana3DView" class="w-full h-full flex items-center justify-center">
-                                <i class="fas fa-circle-notch text-neonPurple text-7xl animate-spin-slow"></i>
-                            </div>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div>
-                                <h4 class="font-bold text-white text-sm">Fungsi Utama:</h4>
-                                <p id="komponenPenjanaFungsi" class="text-sm text-slate-300 leading-relaxed">
-                                    Aci pusat yang berputar untuk memotong garisan magnetik bagi menghasilkan tenaga elektrik aruhan. Biasanya digerakkan oleh tenaga luaran seperti takungan air empangan.
-                                </p>
-                            </div>
-                            
-                            <div class="grid grid-cols-2 gap-4 text-xs pt-4 border-t border-white/5">
-                                <div>
-                                    <span class="text-slate-400 block">Kategori</span>
-                                    <strong id="komponenPenjanaKategori" class="text-white text-sm">Bahagian Dinamik</strong>
-                                </div>
-                                <div>
-                                    <span class="text-slate-400 block">Bahan Buatan</span>
-                                    <strong id="komponenPenjanaBahan" class="text-white text-sm">Gegelung Tembaga & Besi Padu</strong>
                                 </div>
                             </div>
                         </div>
@@ -1045,7 +970,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- App Item 1: KIPAS SILING -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
@@ -1298,111 +1223,58 @@
         animateParticles();
 
 
-        // KOMPONEN DATA & SELECTION (Bahagian 5 & 6)
+        // KOMPONEN DATA & SELECTION (Bahagian Gabungan Motor/Penjana)
         const komponenData = {
             rotor: {
                 nama: "ROTOR",
-                fungsi: "Bahagian utama yang berputar di dalam motor elektrik. Mempunyai teras besi lembut berlapis untuk menampung gegelung dawai tembaga magnetik.",
+                fungsi: "Bahagian utama yang berputar di dalam motor elektrik atau aci pusat keluli dalam penjana. Mempunyai teras besi lembut berlapis untuk menampung gegelung dawai tembaga magnetik.",
                 kategori: "Bahagian Bergerak (Dinamik)",
                 bahan: "Besi Lembut Berlapisan & Tembaga",
                 icon: "fa-cog"
             },
             stator: {
                 nama: "STATOR",
-                fungsi: "Bahagian perumah luar motor yang kekal pegun. Ia berfungsi menyokong medan magnet pegun di sekeliling rotor yang berputar.",
+                fungsi: "Bahagian perumah luar yang kekal pegun. Berfungsi menyokong medan magnet pegun (motor) atau membekalkan kutub fluks utama utara-selatan (penjana).",
                 kategori: "Bahagian Pegun (Statik)",
-                bahan: "Keluli Tuang & Magnet",
+                bahan: "Keluli Tuang, Kepingan Besi Silikon & Magnet",
                 icon: "fa-shield-alt"
             },
             komutator: {
-                nama: "KOMUTATOR",
-                fungsi: "Gelang tembaga yang terbelah dua berfungsi menyongsangkan arah pengaliran arus di dalam gegelung setiap separuh putaran agar motor sentiasa berputar pada satu arah yang sama.",
-                kategori: "Penyambung Elektrik Dinamik",
-                bahan: "Tembaga Berkualiti Tinggi",
+                nama: "KOMUTATOR / GELANG GELINCIR",
+                fungsi: "Komutator (Motor): Gelang tembaga terbelah yang menyongsangkan arah arus. Gelang Gelincir (Penjana): Gelang bulat penuh bagi menyalurkan arus aruhan keluar tanpa memutar belit wayar.",
+                kategori: "Penyambung Elektrik / Terminal",
+                bahan: "Tembaga / Tembaga Kuning (Brass)",
                 icon: "fa-ring"
             },
             berus: {
                 nama: "BERUS KARBON",
-                fungsi: "Menghubungkan arus elektrik daripada punca luar ke komutator yang sedang berputar secara fizikal.",
+                fungsi: "Menghubungkan arus elektrik secara fizikal daripada punca luar ke komutator (motor) atau mengambil arus terjana keluar (penjana) yang sedang berputar.",
                 kategori: "Bahagian Geseran Konduktif",
                 bahan: "Karbon & Grafit Lembut",
                 icon: "fa-brush"
             },
             magnet: {
                 nama: "MAGNET KEKAL",
-                fungsi: "Menghasilkan medan magnet yang kuat untuk berinteraksi dengan medan magnet sekunder pada rotor pembawa arus bagi menghasilkan daya tork pusingan.",
+                fungsi: "Menghasilkan medan magnet yang kuat untuk berinteraksi dengan medan magnet sekunder bagi menghasilkan daya tork pusingan atau untuk proses pemotongan fluks.",
                 kategori: "Punca Medan Magnetik",
                 bahan: "Neodymium / Ferit Magnet",
                 icon: "fa-magnet"
             },
             gegelung: {
-                nama: "GEGELUNG TEMBAGA",
-                fungsi: "Gegelung ialah komponen yang berputar dalam motor DC apabila arus elektrik mengalir melaluinya. Apabila arus elektrik mengalir melalui gegelung yang berada dalam medan magnet (dari N ke S), daya terhasil pada dua sisi gegelung dalam arah bertentangan. Pasangan daya ini menghasilkan tork yang menyebabkan gegelung berputar dari kutub Selatan (S) menuju ke kutub Utara (N) secara berterusan.",
-                kategori: "Pengalir Elektrikal (Bahagian Berputar)",
+                nama: "GEGELUNG (ARMATUR)",
+                fungsi: "Komponen yang berputar dalam medan magnet. Motor: Apabila arus mengalir, ia menghasilkan daya tolakan. Penjana: Apabila diputar memotong magnet, ia menjana arus.",
+                kategori: "Pengalir Elektrikal",
                 bahan: "Kuprum Enamel Gred Tinggi / Dawai Tembaga",
                 icon: "fa-wind"
             },
             aci: {
                 nama: "ACI (SHAFT)",
-                fungsi: "Paksi utama keluli besi yang menyalurkan gerakan putaran mekanikal dari rotor keluar ke peralatan seperti bilah kipas atau roda kenderaan.",
-                kategori: "Penerima Gerakan Kinetik",
-                bahan: "Keluli Tahan Karat",
+                fungsi: "Paksi utama keluli yang menyalurkan gerakan putaran mekanikal keluar (motor) atau menerima putaran masuk dari sumber luaran (penjana).",
+                kategori: "Penyalur/Penerima Gerakan Kinetik",
+                bahan: "Keluli Tahan Karat / Padu",
                 icon: "fa-arrows-alt-h"
             }
         };
-
-        const komponenPenjanaData = {
-            'rotor-p': {
-                nama: "ROTOR PENJANA",
-                fungsi: "Aci pusat keluli yang menampung lilitan dawai elektromagnet dan diputarkan secara paksa bagi menjana aruhan fluks magnet pemotongan.",
-                kategori: "Penerima Kuasa Fizikal",
-                bahan: "Dawai Tembaga & Besi Padu",
-                icon: "fa-circle-notch"
-            },
-            'stator-p': {
-                nama: "STATOR PENJANA",
-                fungsi: "Besi magnet sekeliling luaran pegun yang membekalkan kutub fluks utama utara-selatan.",
-                kategori: "Bahagian Pegun",
-                bahan: "Kepingan Besi Silikon",
-                icon: "fa-border-style"
-            },
-            'slipring': {
-                nama: "GELANG GELINCIR (SLIP RING)",
-                fungsi: "Dua gelang logam bulat penuh berterusan bagi menyalurkan arus elektrik ulang alik (AC) keluar ke litar beban dengan selamat tanpa memutar belitkan wayar.",
-                kategori: "Sistem Gelinciran Terminal",
-                bahan: "Tembaga Kuning / Brass",
-                icon: "fa-circle"
-            },
-            'bearing': {
-                nama: "GALAS (BEARING)",
-                fungsi: "Mengurangkan geseran putaran aci dan membolehkan putaran turbine penjana selancar mungkin pada kelajuan tinggi.",
-                kategori: "Bahagian Mekanikal Sokongan",
-                bahan: "Bebola Keluli Padu",
-                icon: "fa-life-ring"
-            },
-            'perumah': {
-                nama: "PERUMAH (HOUSING)",
-                fungsi: "Melindungi keseluruhan komponen dalaman yang sensitif daripada habuk, kotoran, dan air hujan terutamanya bagi generator luar.",
-                kategori: "Pelindung Luaran",
-                bahan: "Aluminium Tuang / Logam Aloi",
-                icon: "fa-box-open"
-            }
-        };
-
-        // Tab selection logic
-        document.getElementById('tabMotorBtn').addEventListener('click', () => {
-            document.getElementById('komponenMotorSection').classList.remove('hidden');
-            document.getElementById('komponenPenjanaSection').classList.add('hidden');
-            document.getElementById('tabMotorBtn').className = "px-6 py-3 rounded-full bg-neonBlue/20 border border-neonBlue/50 text-neonBlue font-orbitron font-bold text-sm tracking-wider hover:bg-neonBlue/30 transition-all shadow-neonB";
-            document.getElementById('tabPenjanaBtn').className = "px-6 py-3 rounded-full bg-slate-900 border border-white/10 text-slate-400 font-orbitron font-bold text-sm tracking-wider hover:text-white transition-all";
-        });
-
-        document.getElementById('tabPenjanaBtn').addEventListener('click', () => {
-            document.getElementById('komponenMotorSection').classList.add('hidden');
-            document.getElementById('komponenPenjanaSection').classList.remove('hidden');
-            document.getElementById('tabPenjanaBtn').className = "px-6 py-3 rounded-full bg-neonPurple/20 border border-neonPurple/50 text-neonPurple font-orbitron font-bold text-sm tracking-wider hover:bg-neonPurple/30 transition-all shadow-neonP";
-            document.getElementById('tabMotorBtn').className = "px-6 py-3 rounded-full bg-slate-900 border border-white/10 text-slate-400 font-orbitron font-bold text-sm tracking-wider hover:text-white transition-all";
-        });
 
         function pilihKomponen(key) {
             const data = komponenData[key];
@@ -1418,7 +1290,7 @@
             const view = document.getElementById('komponen3DView');
             if (key === 'gegelung') {
                 view.innerHTML = `
-                    <div class="w-full h-full relative group cursor-pointer" onclick="openDiagramModal('gegelung info.png', 'FUNGSI GEGELUNG DALAM MOTOR DC')">
+                    <div class="w-full h-full relative group cursor-pointer" onclick="openDiagramModal('gegelung info.png', 'FUNGSI GEGELUNG DALAM SISTEM ELEKTRIK')">
                         <img src="gegelung info.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Infografik Gegelung">
                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <span class="px-3 py-1 rounded bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron text-[10px] font-semibold">
@@ -1428,7 +1300,6 @@
                     </div>
                 `;
             } else if (key === 'aci') {
-                // UI baharu untuk memaparkan dua gambar pada bahagian Aci
                 view.innerHTML = `
                     <div class="w-full h-full flex gap-2 p-2">
                         <div class="w-1/2 h-full relative group cursor-pointer rounded-xl overflow-hidden border border-white/10 bg-slate-900/50" onclick="openDiagramModal('gambar aci.png', 'GAMBAR ACI / GANDAR (SHAFT)')">
@@ -1441,6 +1312,48 @@
                         </div>
                         <div class="w-1/2 h-full relative group cursor-pointer rounded-xl overflow-hidden border border-white/10 bg-slate-900/50" onclick="openDiagramModal('info aci.png', 'INFOGRAFIK ACI / GANDAR (SHAFT)')">
                             <img src="info aci.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Info Aci">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-2 py-1 rounded bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron text-[9px] font-semibold flex flex-col items-center text-center">
+                                    <i class="fas fa-search-plus mb-1 text-sm"></i> INFOGRAFIK
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'berus') {
+                view.innerHTML = `
+                    <div class="w-full h-full flex gap-2 p-2">
+                        <div class="w-1/2 h-full relative group cursor-pointer rounded-xl overflow-hidden border border-white/10 bg-slate-900/50" onclick="openDiagramModal('gambar berus karbon.png', 'GAMBAR BERUS KARBON')">
+                            <img src="gambar berus karbon.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Gambar Berus Karbon">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-2 py-1 rounded bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron text-[9px] font-semibold flex flex-col items-center text-center">
+                                    <i class="fas fa-search-plus mb-1 text-sm"></i> GAMBAR
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-1/2 h-full relative group cursor-pointer rounded-xl overflow-hidden border border-white/10 bg-slate-900/50" onclick="openDiagramModal('info berus karbon.png', 'INFOGRAFIK BERUS KARBON')">
+                            <img src="info berus karbon.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Info Berus Karbon">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-2 py-1 rounded bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron text-[9px] font-semibold flex flex-col items-center text-center">
+                                    <i class="fas fa-search-plus mb-1 text-sm"></i> INFOGRAFIK
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'komutator') {
+                view.innerHTML = `
+                    <div class="w-full h-full flex gap-2 p-2">
+                        <div class="w-1/2 h-full relative group cursor-pointer rounded-xl overflow-hidden border border-white/10 bg-slate-900/50" onclick="openDiagramModal('gambar komutator.png', 'GAMBAR KOMUTATOR')">
+                            <img src="gambar komutator.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Gambar Komutator">
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="px-2 py-1 rounded bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron text-[9px] font-semibold flex flex-col items-center text-center">
+                                    <i class="fas fa-search-plus mb-1 text-sm"></i> GAMBAR
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-1/2 h-full relative group cursor-pointer rounded-xl overflow-hidden border border-white/10 bg-slate-900/50" onclick="openDiagramModal('info komutator.png', 'INFOGRAFIK KOMUTATOR')">
+                            <img src="info komutator.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Info Komutator">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <span class="px-2 py-1 rounded bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron text-[9px] font-semibold flex flex-col items-center text-center">
                                     <i class="fas fa-search-plus mb-1 text-sm"></i> INFOGRAFIK
@@ -1467,34 +1380,6 @@
             activeBtn.classList.remove('border-white/5');
             activeBtn.querySelector('span').className = "font-orbitron font-bold text-sm text-neonBlue";
             activeBtn.querySelector('i').className = "fas fa-chevron-right text-neonBlue";
-        }
-
-        function pilihKomponenPenjana(key) {
-            const data = komponenPenjanaData[key];
-            if (!data) return;
-
-            // Update UI
-            document.getElementById('komponenPenjanaNama').textContent = data.nama;
-            document.getElementById('komponenPenjanaFungsi').textContent = data.fungsi;
-            document.getElementById('komponenPenjanaKategori').textContent = data.kategori;
-            document.getElementById('komponenPenjanaBahan').textContent = data.bahan;
-
-            const view = document.getElementById('komponenPenjana3DView');
-            view.innerHTML = `<i class="fas ${data.icon} text-neonPurple text-7xl animate-bounce"></i>`;
-
-            const btns = document.querySelectorAll('.komponen-p-btn');
-            btns.forEach(b => {
-                b.classList.remove('border-neonPurple/50', 'bg-neonPurple/10');
-                b.classList.add('border-white/5');
-                b.querySelector('span').className = "font-orbitron font-bold text-sm text-white";
-                b.querySelector('i').className = "fas fa-chevron-right text-slate-500";
-            });
-
-            const activeBtn = event.currentTarget;
-            activeBtn.classList.add('border-neonPurple/50', 'bg-neonPurple/10');
-            activeBtn.classList.remove('border-white/5');
-            activeBtn.querySelector('span').className = "font-orbitron font-bold text-sm text-neonPurple";
-            activeBtn.querySelector('i').className = "fas fa-chevron-right text-neonPurple";
         }
 
 
