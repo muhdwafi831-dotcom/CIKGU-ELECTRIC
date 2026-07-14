@@ -19,7 +19,7 @@
     <!-- GSAP (GreenSock Animation Platform) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
+    
     <script>
         tailwind.config = {
             theme: {
@@ -171,7 +171,7 @@
         </div>
     </div>
     <!-- Muzik Santai (Chill/Lo-Fi) -->
-    <audio id="bgMusic" loop src="chill.mp3"></audio>
+    <audio id="bgMusic" loop src="https://assets.codepen.io/4358584/chill.mp3"></audio>
 
     <!-- HEADER / NAVIGATION (Glassmorphic & Responsive) -->
     <header class="sticky top-0 w-full z-40 glassmorphism border-b border-white/10">
@@ -852,7 +852,7 @@
                             <div>
                                 <h4 class="font-bold text-white text-sm">Fungsi Utama:</h4>
                                 <p id="komponenFungsi" class="text-sm text-slate-300 leading-relaxed">
-                                    Bahagian berputar dalam sistem elektromagnet. Ia membawa gegelung pengalir bagi mewujudkan daya gerakan apabila berinteraksi dengan medan magnet daripada stator.
+                                    Bahagian utama yang berputar di dalam motor elektrik. Mempunyai teras besi lembut berlapis untuk menampung gegelung dawai tembaga magnetik.
                                 </p>
                             </div>
                             
@@ -1045,12 +1045,17 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
                 
-                <!-- App Item 1 -->
+                <!-- App Item 1: KIPAS SILING -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-44 bg-gradient-to-br from-blue-900/30 to-purple-900/20 flex items-center justify-center relative">
-                        <i class="fas fa-fan text-neonBlue text-6xl group-hover:rotate-180 transition-transform duration-1000"></i>
+                    <div class="h-44 relative cursor-pointer overflow-hidden border-b border-white/10" onclick="openDiagramModal('kipas syiling.png', 'KIPAS SYILING RUMAH')">
+                        <img src="kipas syiling.png" alt="Kipas Siling" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="px-3 py-1 rounded-full bg-slate-900/80 border border-neonBlue text-neonBlue font-orbitron font-semibold text-[10px] tracking-wider shadow-neonB">
+                                <i class="fas fa-search-plus mr-1"></i> LIHAT RAJAH
+                            </span>
+                        </div>
                     </div>
                     <div class="p-5">
                         <span class="text-[10px] font-bold text-neonBlue font-orbitron">MOTOR AC</span>
