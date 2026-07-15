@@ -155,6 +155,11 @@
     <!-- Hukum & Teori -->
     <audio id="narasi-fleming-kiri" src="narasi tangan kiri fleming.wav"></audio>
     <audio id="narasi-fleming-kanan" src="narasi tangan kanan fleming.wav"></audio>
+    
+    <!-- Hukum & Teori (Langkah demi langkah Modal) -->
+    <audio id="narasi-langkah-ohm" src="narasi langkah ohm.wav"></audio>
+    <audio id="narasi-langkah-fleming-kiri" src="narasi langkah fleming kiri.wav"></audio>
+    <audio id="narasi-langkah-fleming-kanan" src="narasi langkah fleming kanan.wav"></audio>
 
     <!-- Aplikasi -->
     <audio id="narasi-kipas" src="narasi kipas syiling.wav"></audio>
@@ -911,9 +916,9 @@
                             </button>
                         </div>
 
-                        <!-- Rujukan Gambar fleming tangan kanan.png (Hukum Tangan Kanan Fleming) -->
-                        <div class="mb-4 rounded-xl overflow-hidden border border-neonYellow/30 aspect-video relative group cursor-pointer" onclick="openDiagramModal('fleming tangan kanan.png', 'HUKUM TANGAN KANAN FLEMING')">
-                            <img src="fleming tangan kanan.png" alt="Rujukan Hukum Tangan Kanan Fleming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <!-- Rujukan Gambar 121211.png (Hukum Tangan Kanan Fleming Utama) -->
+                        <div class="mb-4 rounded-xl overflow-hidden border border-neonYellow/30 aspect-video relative group cursor-pointer" onclick="openDiagramModal('121211.png', 'HUKUM TANGAN KANAN FLEMING')">
+                            <img src="121211.png" alt="Rujukan Hukum Tangan Kanan Fleming" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <span class="px-2.5 py-1 rounded bg-slate-900/80 border border-neonYellow text-neonYellow font-orbitron text-[10px] font-semibold">
                                     <i class="fas fa-search-plus mr-1"></i> BESARKAN RAJAH
@@ -1425,27 +1430,41 @@
             let penerangan = "";
             let contoh = "";
             let imgHTML = "";
+            let audioId = ""; // ID Narasi untuk dialog langkah demi langkah
             
-            if (hukumKey === 'fleming-kiri') {
+            if (hukumKey === 'ohm') {
+                tajuk = "HUKUM OHM";
+                penerangan = "Langkah 1: Menghubungkan voltan dan arus elektrik.\nLangkah 2: Menentukan rintangan dawai kuprum.\nLangkah 3: Formula matematik ialah V = I × R.";
+                contoh = "Pengecas telefon pintar melaras voltan agar bateri dicas dengan arus optimum tanpa merosakkan litar.";
+                audioId = "narasi-langkah-ohm";
+            } else if (hukumKey === 'fleming-kiri') {
                 tajuk = "HUKUM TANGAN KIRI FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KIRI.\nLangkah 2: Telunjuk tunjuk arah medan magnet (U ke S).\nLangkah 3: Jari tengah ke arah arus.\nLangkah 4: Ibu jari menunjukkan arah tindakan daya pusingan.";
                 contoh = "Digunakan oleh kipas angin elektrik semasa ia mula berputar bila suis ditekan.";
                 imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonPurple/30 max-h-48 flex justify-center"><img src="1Tangan kiri fleming.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kiri Fleming"></div>`;
+                audioId = "narasi-langkah-fleming-kiri";
             } else {
                 tajuk = "HUKUM TANGAN KANAN FLEMING";
                 penerangan = "Langkah 1: Gunakan tangan KANAN.\nLangkah 2: Ibu jari mengikut arah gerakan konduktor.\nLangkah 3: Telunjuk selari dengan medan magnet.\nLangkah 4: Jari tengah menunjukkan arah arus aruhan terhasil.";
                 contoh = "Turbin hidroelektrik besar menukar pusingan air sungai menjadi arus dijanakan keluar.";
                 imgHTML = `<div class="mb-4 rounded-xl overflow-hidden border border-neonYellow/30 max-h-48 flex justify-center"><img src="fleming tangan kanan.png" class="max-h-48 w-auto object-contain rounded" alt="Hukum Tangan Kanan Fleming"></div>`;
+                audioId = "narasi-langkah-fleming-kanan";
             }
+
+            // Butang Audio untuk Narasi Langkah Demi Langkah
+            let butangAudio = `<button onclick="toggleNarration(event, '${audioId}', this)" class="w-8 h-8 rounded-full bg-neonBlue/10 border border-neonBlue/30 text-neonBlue hover:bg-neonBlue hover:text-black hover:shadow-neonB transition-all flex items-center justify-center shrink-0" title="Dengar Penerangan Langkah"><i class="fas fa-volume-up text-sm"></i></button>`;
 
             // High Fidelity Dialog
             const dialog = document.createElement('div');
             dialog.className = "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md";
             dialog.innerHTML = `
                 <div class="glassmorphism max-w-lg w-full p-6 rounded-3xl border border-neonBlue/40 shadow-neonB space-y-6">
-                    <div class="flex items-center justify-between border-b border-white/10 pb-4">
-                        <h4 class="font-orbitron font-bold text-xl text-neonBlue">${tajuk}</h4>
-                        <button onclick="this.closest('.fixed').remove()" class="text-white hover:text-red-500 text-lg">&times;</button>
+                    <div class="flex items-start justify-between border-b border-white/10 pb-4">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+                            <h4 class="font-orbitron font-bold text-xl text-neonBlue">${tajuk}</h4>
+                            ${butangAudio}
+                        </div>
+                        <button onclick="tutupDialogHukum(this)" class="text-white hover:text-red-500 text-2xl leading-none">&times;</button>
                     </div>
                     ${imgHTML}
                     <div class="space-y-4 text-sm text-slate-300">
@@ -1459,11 +1478,31 @@
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 rounded-full bg-neonBlue text-black font-bold font-orbitron text-xs">TUTUP</button>
+                        <button onclick="tutupDialogHukum(this)" class="px-6 py-2 rounded-full bg-neonBlue text-black font-bold font-orbitron text-xs">TUTUP</button>
                     </div>
                 </div>
             `;
             document.body.appendChild(dialog);
+        }
+
+        // FUNGSI UNTUK MENUTUP DIALOG HUKUM DAN BERHENTIKAN AUDIO (JIKA ADA)
+        function tutupDialogHukum(elemen) {
+            // Hentikan narasi jika sedang dimainkan semasa dialog ditutup
+            if (currentNarration && !currentNarration.paused) {
+                currentNarration.pause();
+                currentNarration.currentTime = 0;
+                if (currentNarrationBtn) {
+                    const oldIcon = currentNarrationBtn.querySelector('i');
+                    if (oldIcon) {
+                        oldIcon.classList.remove('fa-stop-circle', 'text-red-400');
+                        oldIcon.classList.add('fa-volume-up');
+                    }
+                    currentNarrationBtn.classList.remove('animate-pulse', 'bg-white', 'text-black');
+                }
+                currentNarration = null;
+                currentNarrationBtn = null;
+            }
+            elemen.closest('.fixed').remove();
         }
 
         // FUNGSI NOTA INTERAKTIF MODAL (Bahagian Konsep Asas)
